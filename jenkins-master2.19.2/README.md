@@ -1,30 +1,15 @@
 ### Description
-jenkins with nodejs slave
+jenkins master install
 
 ### Usage
 Use it with docker-compose    
 
 ```
-jenkins:
-    image: 'registry.aliyuncs.com/acs-sample/jenkins:latest'
-    ports:
-        - '8080:8080'
-        - '50000:50000'
-    volumes:
-        - '/var/lib/docker/jenkins:/var/jenkins_home'
-    privileged: true
-    restart: always
-    labels:
-        aliyun.scale: '1'
-        aliyun.probe.url: 'tcp://container:8080'
-        aliyun.probe.initial_delay_seconds: '10'
-        aliyun.routing.port_8080: jenkins
-    links:
-        - slave-nodejs
+#部署
 
-slave-nodejs:
-    image: 'registry.aliyuncs.com/acs-sample/jenkins-slave-dind-nodejs'
-    restart: always 
-    labels:
-        aliyun.scale: '1'
+docker  run -d -v /home/workspace/jenkins-master:/var/jenkins_home -p 8080:8080 registry.cn-beijing.aliyuncs.com/meow/jenkins-master:2.19.2
+
+#登录
+http://localhost:8080/    #docker logs  ContainerID 查看默认密码；跳过推荐插件安装
+
 ```
