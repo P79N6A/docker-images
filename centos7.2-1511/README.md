@@ -10,4 +10,4 @@
 
 ### 镜像名称
 
-registry.cn-beijing.aliyuncs.com/meow/centos:7.2.1511
+- registry.cn-beijing.aliyuncs.com/meow/centos:7.2.1511
