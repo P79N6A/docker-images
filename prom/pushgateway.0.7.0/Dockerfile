@@ -1,1 +1,1 @@
-FROM  prom/pushgateway.0.7.0
+FROM  prom/pushgateway:0.7.0
