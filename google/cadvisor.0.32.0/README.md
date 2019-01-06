@@ -16,6 +16,10 @@ sudo docker run \
   google/cadvisor:v0.32.0
 ```
 
+### my build address
+
+- https://cr.console.aliyun.com/repository/cn-beijing/meow/google-cadvisor/build
+
 ### 镜像名称
 
 - registry.cn-beijing.aliyuncs.com/meow/google-cadvisor:0.32.0
